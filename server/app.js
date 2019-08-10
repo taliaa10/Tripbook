@@ -84,8 +84,14 @@ app.use((req, res, next) => {
 app.get('/trips', (req, res) => {
     let username = req.session.username
     let userTrips = trips.filter(trip => trip.username == username)
+    console.log(userTrips)
     res.render('trips', {userTrips: userTrips})
 })
+
+// FOR GETTING PUBLIC PROFILES
+// app.get('trips/:user.firstName', (req, res) => {
+//     users.
+// })
 
 // REGISTER
 app.get('/register', (req, res) => {

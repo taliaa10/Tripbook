@@ -8,7 +8,6 @@ class Trip {
         this.returnDate = returnDate
         this.id  = uniqid()
         this.username = username
-
     }
 }
 

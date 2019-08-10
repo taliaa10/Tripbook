@@ -21,9 +21,10 @@ router.post('/add-trips', (req, res) => {
     let departureDate = req.session.departureDate
     let returnDate = req.session.returnDate
     let id = req.session.id
+    let username = user.username
 
     // let trip = new Trip()
-    let trip = new Trip(tripTitle, tripImage, departureDate, returnDate, id)
+    let trip = new Trip(tripTitle, tripImage, departureDate, returnDate, id, username)
 
     // Trip.addTrip(tripTitle, tripImage, departureDate, returnDate)
 
