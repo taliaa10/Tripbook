@@ -1,0 +1,65 @@
+<head>
+    <link rel="stylesheet" type="text/css" href="semantic/dist/semantic.min.css">
+    <link rel="stylesheet" type="text/css" href="site.css">
+
+</head>
+
+<html>
+
+    <body>
+
+        {{> menu}}
+
+
+        <section class="auth-section">
+        <form action="/register" method="POST" class="ui equal width form custom-auth-form">
+            <h2>Register</h2>
+        <div >
+            <div class="fields">
+              <div class="field">
+                <label>Username</label>
+                <input type="text" placeholder="Username" name="username">
+              </div>
+            </div>
+
+              <div class="fields">
+              <div class="field">
+                <label>Password</label>
+                <input type="password" style="background-image: url(&quot;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR4nGP6zwAAAgcBApocMXEAAAAASUVORK5CYII=&quot;); cursor: auto;" placeholder="Password" name="password">
+              </div>
+            </div>
+
+            <div class="fields">
+              <div class="field">
+                <label>First name</label>
+                <input type="text" placeholder="First Name" name="firstName">
+              </div>
+            </div>
+            <div class="fields">
+              <div class="field">
+                <label>Last name</label>
+                <input type="text" placeholder="Last Name" name="lastName">
+            </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="ui animated button" tabindex="0">
+            <button type="submit" class="visible content ui button">Register</button>
+            <div class="hidden content">
+              <i class="right arrow icon"></i>
+            </div>
+          </div>
+          <h4>Already have an account? Login <a href="/login">here</a></h4>
+        </form>
+    </section>
+
+    </body>
+
+
+    <script>
+    // let titleInput = document.getElementById("tripTitle")
+    // document.addEventListener('onload', titleInput.focus())
+    </script>
+
+</html>

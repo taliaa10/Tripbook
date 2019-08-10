@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <link rel="stylesheet" type="text/css" href="semantic/dist/semantic.min.css">
+        <link rel="stylesheet" type="text/css" href="site.css">
+    <title>Chat - TripBook</title>
+</head>
+<body>
+
+<header>
+    {{> menu}}
+</header>
+#
+<section class="chat__section">
+
+    <div class="chat__section-channels">
+
+
+    </div>
+
+    <div class="chat__section-chat">
+
+    <ul id="chatMessagesUL">
+
+
+    </ul>
+
+    <div class="ui fluid action input chatbox">
+    <input type="text" id="chatMessageTextBox" placeholder="Join the convo...">
+    <div id="sendButton" class="ui teal button">Send</div>
+    </div>
+
+    {{! <div class="ui fluid icon input">
+    <input type="text" id="chatMessageTextBox" placeholder="Join the convo...">
+    <i class="search icon"></i>
+    </div>
+
+    <button id="sendButton" class="ui teal button">Send</button> }}
+    </div>
+</section>
+
+</body>
+<script src="/socket.io/socket.io.js"></script>
+<script src="app.js"></script>
+</html>

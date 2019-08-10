@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <link rel="stylesheet" type="text/css" href="semantic/dist/semantic.min.css">
+        <link rel="stylesheet" type="text/css" href="site.css">
+    <title>Your Trips - TripBook</title>
+</head>
+<body>
+
+<header>
+    {{> menu}}
+</header>
+
+<section class="trips__list-page">
+    <!-- <h2>Your Trips</h2> -->
+    
+    <div class="profile__info">
+
+        <div class="profile__info-badge">
+            <img class="ui medium circular image profile-picture" src="/images/woman-travel.png">
+            <h3 class="profile-username">{{user.firstName}}</h3>
+            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Similique voluptatum voluptas minima, aspernatur rerum nam pariatur a nostrum eiust!</p>
+        </div>
+
+        <a href="/trips/add-trips"><button class="fluid ui teal button">Add Trips</button></a>
+
+    </div>
+
+    <ul class="trips__list">
+
+        <li class="trips__list-item">
+            {{! <span><i class="ellipsis vertical icon"></i></span> }}
+            <h3>Las Vegas</h3>
+            <img class="trips__list-image" src="/images/locations/vegas.jpg">
+            09-27-2019
+            10-07-2019
+        </li>
+
+        <li class="trips__list-item">
+            {{! <span><i class="ellipsis vertical icon"></i></span> }}
+            <h3>Denver</h3>
+            <img class="trips__list-image" src="/images/locations/Denver.jpg">
+            09-27-2019
+            10-07-2019
+        </li>
+
+        <li class="trips__list-item">
+            {{! <span><i class="ellipsis vertical icon"></i></span> }}
+            <h3>Disney</h3>
+            <img class="trips__list-image" src="/images/locations/disney.jpg">
+            09-27-2019
+            10-07-2019
+        </li>
+
+        <li class="trips__list-item">
+            {{! <span><i class="ellipsis vertical icon"></i></span> }}
+            <h3>Greenland</h3>
+            <img class="trips__list-image" src="/images/locations/loc1.png">
+            09-27-2019
+            10-07-2019
+        </li>
+
+        <li class="trips__list-item">
+            {{! <span><i class="ellipsis vertical icon"></i></span> }}
+            <h3>Miami</h3>
+            <img class="trips__list-image" src="/images/locations/miami-beach.jpg">
+            09-27-2019
+            10-07-2019
+        </li>
+
+    {{#userTrips}}
+
+
+        <form action="/delete-trip" method="POST">
+        <li class="trips__list-item">
+            {{! <span><i class="ellipsis vertical icon"></i></span> }}
+            <h3>{{tripTitle}}</h3>
+            <img class="trips__list-image" src="{{tripImage}}">
+            {{departureDate}}
+            {{returnDate}}
+            <input type="submit">Delete</button>
+            <input type="hidden" value={{id}} name="id">
+        </li>
+        </form>
+    {{/userTrips}}
+
+
+    </ul>
+
+
+</section>
+
+</body>
+</html>

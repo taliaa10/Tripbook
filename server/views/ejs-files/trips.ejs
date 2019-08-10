@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <link rel="stylesheet" type="text/css" href="semantic/dist/semantic.min.css">
+        <link rel="stylesheet" type="text/css" href="site.css">
+    <title>Your Trips - TripBook</title>
+</head>
+<body>
+
+<header>
+    <% include partials/menu.ejs %>
+</header>
+
+<section class="trips__list-page">
+    <!-- <h2>Your Trips</h2> -->
+
+    
+    <div class="profile__info">
+        <div class="profile__info-badge">
+            <img class="ui medium circular image profile-picture" src="/images/circle-image.png">
+            <h3 class="profile-username">Taliaa</h3>
+            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Similique voluptatum voluptas minima, aspernatur rerum nam pariatur a nostrum eiust!</p>
+        </div>
+        <a href="/trips/add-trips"><button class="fluid ui teal button">Add Trips</button></a>
+    </div>
+
+    <ul class="trips__list">
+            <% userTrips.forEach(function(userTrip){ %>
+            <li class="trips__list-item">
+                <h3>Trip to <%- userTrip.tripTitle %></h3>
+                <img src="<%- userTrip.tripImage %>">
+                <%- userTrip.departureDate %>
+                <%- userTrip.returnDate %>
+
+            </li>
+
+
+        <%});%>
+    </ul>
+</section>
+
+</body>
+</html>

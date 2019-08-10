@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <link rel="stylesheet" type="text/css" href="/semantic/dist/semantic.min.css">
+        <link rel="stylesheet" type="text/css" href="/site.css">
+    <title>Document</title>
+</head>
+<body>
+    
+    <header>
+        <% include partials/menu.ejs %>
+    </header>
+
+        <form action="/trips/upload" method="POST" enctype="multipart/form-data">
+            <div class="form-group custom-auth-form">
+    
+            <label for="tripImage">Trip Image: </label>
+            <input id="tripImage" name="tripImage" type="file" />
+    
+            </div>
+            <button type="submit" class="btn btn-success">Upload</button>
+            </form>
+            
+            
+      
+    
+            <form action="/trips/add-trips" method="POST" class="custom-auth-form">
+            <h2>Add Trips</h2>
+
+
+    
+                <!-- <input type="hidden" name="tripImage" value="<%- tripImage %>">
+                <img src="<%- tripImage %>"> -->
+    
+                <label for="exampleInputEmail1">Trip Title: </label>
+    
+                <input type="text" class="form-control" id="tripTitle" name="tripTitle" aria-describedby="emailHelp" placeholder="Enter trip name">
+                </div>
+                
+                
+    
+                <div class="form-group">
+    
+                Departure Date: <input class="form-control" type="date" name="departureDate">
+    
+                </div>
+    
+    
+                <div class="form-group">
+    
+                Return Date: <input class="form-control" type="date" name="returnDate">
+    
+                </div>
+    
+    
+                <button type="submit" class="btn btn-success">Add Trip</button>
+    
+            </form>
+            
+
+</body>
+</html>
